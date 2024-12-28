@@ -1,0 +1,117 @@
+.carousel-container {
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+    position: relative;
+}
+
+.carousel-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Individual Slide */
+.carousel-slide {
+    flex: 0 0 80%;
+    margin: 0 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.carousel-slide h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.carousel-slide p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-nav button:hover {
+    background-color: #1861aa;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-nav button:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+/* Dots Navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #d1d5db;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots button.active {
+    background-color: var(--primary-color);
+}
+
+.carousel-dots button:hover {
+    background-color: #1861aa;
+}

@@ -1,0 +1,112 @@
+/* Access Page CSS */
+
+.access-page {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9fafa;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #2081e2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.loading {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+}
+
+.empty-message {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+}
+
+.nft-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.nft-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nft-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nft-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.nft-card h3 {
+    font-size: 1.2rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.nft-card p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 15px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.video-container video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.video-container video:hover {
+    border: 2px solid #2081e2;
+}
+
+@media (max-width: 768px) {
+    .nft-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .nft-card img {
+        height: 150px;
+    }
+
+    .video-container {
+        padding-top: 75%; /* 4:3 Aspect Ratio for smaller screens */
+    }
+}
+/*  */
