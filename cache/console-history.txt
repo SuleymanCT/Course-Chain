@@ -1,9 +1,0 @@
-console.log("Certificate Address:", certificate.address);
-const certificate = await Certificate.attach("CONTRACT_ADDRESS_HERE");
-const Certificate = await ethers.getContractFactory("Certificate");
-console.log("AccessKey Address:", accessKey.address);
-const accessKey = await AccessKey.attach("CONTRACT_ADDRESS_HERE");
-const AccessKey = await ethers.getContractFactory("AccessKey");
-console.log("Marketplace Address:", marketplace.address);
-place.attach("CONTRACT_ADDRESS_HERE");
-const Marketplace = await ethers.getContractFactorconst marketplace = await Market
