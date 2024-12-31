@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  ################################################################
+  # 1) Hardhat Node Servisi
+  ################################################################
+  hardhat:
+    build:
+      context: .
+      dockerfile: Dockerfile.hardhat
+    container_name: nft-hardhat
+    ports:
+      - "8545:8545"   # host:container
+    # Kod değişikliklerini anlık görmek istersen volume ekleyebilirsin,
+    # ama genelde production senaryosunda mount yapmaya gerek yok.
+    # volumes:
+    #   - ./:/app
+    command: ["npx", "hardhat", "node"]
+    # Hardhat node container ayağa kalktığında local blockchain 8545'te dinleyecek.
+
+  ################################################################
+  # 2) React Frontend Servisi (Nginx)
+  ################################################################
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: nft-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - hardhat
+    # React uygulaması, Hardhat node'a bağlanmak için bir RPC URL bekleyebilir.
+    # Mesela .env içinde REACT_APP_RPC_URL=http://localhost:8545 gibi tanımlayabilirsin.
+    # Container içinden "localhost" => container'ın kendisi. Fakat compose içindeki
+    # "hardhat" ismini de kullanabilirsin. Deneme yanılma gerekiyor.

@@ -1,0 +1,41 @@
+##################################################
+# Dockerfile.hardhat
+# Hardhat (lokal blockchain) Alpine üzerinde
+# sorunsuz çalışması için gerekli paketleri kurar.
+##################################################
+
+# 1) Baz imaj olarak node:18-alpine seçiyoruz
+FROM node:18-alpine
+
+# 2) Hardhat'ın ve solc'nin sorunsuz çalışması için
+#    glibc uyumluluk katmanı, build araçları ve python3 ekliyoruz.
+RUN apk update && apk add --no-cache \
+    libc6-compat \
+    build-base \
+    python3
+
+# 3) Konteyner içinde /app klasörünü çalışma dizini yap
+WORKDIR /app
+
+# 4) package.json + package-lock.json dosyalarını kopyala
+COPY package*.json ./
+
+# 5) Bağımlılıkları yükle (Hardhat, Ethers, dotenv, vs.)
+RUN npm install
+
+# 6) Tüm proje dosyalarını kopyala:
+#    (contracts/, scripts/, test/, hardhat.config.js, .env vb.)
+#    .env dosyanız varsa ve container’a dahil etmek istiyorsanız
+#    .dockerignore’a koymadığınızdan emin olun.
+COPY . .
+
+# 7) (İsteğe bağlı) Hardhat compile
+#    Derleme aşamasında solc indirilecek ve /root/.cache/ içinde saklanacak
+RUN npx hardhat compile
+
+# 8) Hardhat node varsayılan olarak 8545 portunu kullanır
+EXPOSE 8545
+
+# 9) Konteyner ayağa kalkınca Hardhat node'u başlat
+#    "--hostname 0.0.0.0" => Dışarıdan erişimi mümkün kılar
+CMD ["npx", "hardhat", "node", "--hostname", "0.0.0.0"]
