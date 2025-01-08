@@ -1,8 +1,8 @@
 import axios from "axios";
 
 // Pinata Gateway
-const PINATA_GATEWAY_URL = "https://brown-given-giraffe-132.mypinata.cloud/ipfs/";
-const PINATA_AUTH_HEADER = "Bearer vTrc5zEXAzcJPxq52pTGYYAgx0r-PPHSu36Ovr6X-ll0dsEe8_fYu0WWkK4-fml-";
+const PINATA_GATEWAY_URL = "h**";
+const PINATA_AUTH_HEADER = "**";
 
 /**
  * IPFS URI'yi Pinata Gateway URL'sine dönüştürür.
