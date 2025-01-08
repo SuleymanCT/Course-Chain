@@ -12,8 +12,8 @@ Course-Chain, NFT ve blockchain teknolojilerini kullanarak eğitim içeriklerini
 
 ## Gereksinimler
 
-- **Node.js** (v14 veya üzeri)
-- **npm** (Node.js ile birlikte gelir)
+- **Node.js** 
+- **npm** 
 - **Hardhat** (Ethereum geliştirme aracı)
 - **MetaMask** (Ethereum cüzdan uzantısı)
 
