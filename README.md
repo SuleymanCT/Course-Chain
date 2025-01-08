@@ -87,7 +87,7 @@ npx hardhat compile ile kontrat adresleri alındıktan sonra, src dosaysındaki 
 -----
 
 Yerel Blockchain Ağı Başlatma
-
+Buradaki çıkan keyleri kopyalayıp saklayın
 Hardhat ile yerel bir blockchain ağı oluşturmak için:
 
 ```bash
@@ -113,6 +113,7 @@ MetaMask’ı Yerel Ağa Bağlama
    - **Zincir Kimliği**: 31337
    - **Para Birimi Sembolü**: ETH
 3. Kaydedin ve ağa bağlanın.
+4. Hardhat node komutu sonrası sakladığını hesaplardan biriinin cüzdan key ini alıp metamask tan import account yaparak gerekli işlemleri yapın. Böylece lokal ağda sınırsız test Ethereum u elde edilmiş olur.
 
 Ardından, Hardhat Node tarafından oluşturulan test hesaplarını kullanarak MetaMask’ınızı bu ağa bağlayabilirsiniz. Bir hesabı eklemek için "Hesap İthal Et" seçeneğini kullanın ve test hesaplarından birinin özel anahtarını girin.
 
