@@ -37,6 +37,19 @@ Gerekli bağımlılıkları yüklemek için:
 npm install
 ```
 
+### IPFS API bağlanması
+
+YOUR_PINATA_GATEWAY_URL: Pinata’nın size verdiği gateway URL.
+
+YOUR_PINATA_AUTH_HEADER: Pinata API anahtarınız (Bearer formatında).
+
+const PINATA_API_KEY = "";
+const PINATA_API_SECRET = "";
+
+Pinata ile kendi API anahtarlarınızı oluşturup bu bilgileri buraya girmeniz gerekmektedir. Pinata Dashboard üzerinden API key ve gateway URL’inizi edinebilirsiniz.
+Alınan URL ve Header i ContractService ve PinataService kısmındaki gerekli alana yapıştırılmalı.
+
+,,,,
 
 Hardhat Kurulumu
 
