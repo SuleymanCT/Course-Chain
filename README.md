@@ -82,6 +82,10 @@ Kontratları derlemek için aşağıdaki komutu çalıştırın:
 npx hardhat compile
 ```
 
+### Akıllı Kontrat Adreslerini Yükleme
+npx hardhat compile ile kontrat adresleri alındıktan sonra, src dosaysındaki config.js dosyasına gerekli adresi bilgilerinin girilmesi gerekmektedir.
+-----
+
 Yerel Blockchain Ağı Başlatma
 
 Hardhat ile yerel bir blockchain ağı oluşturmak için:
