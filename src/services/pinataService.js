@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const PINATA_API_KEY = "1b2fe9d67bca18e1d696";
-const PINATA_API_SECRET = "a4a3cde51c524fd9e6ce9e037c347e90a10e917b97e9a8b1d1967226be64ac51";
+const PINATA_API_KEY = "**";
+const PINATA_API_SECRET = "**";
 
 
 export const uploadToPinata = async (file) => {
