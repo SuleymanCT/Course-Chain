@@ -6,8 +6,8 @@ import axios from "axios";
 import placeholder from "../metadata/placeholder.json";
 
 // Pinata Gateway ve Yetkilendirme
-const PINATA_GATEWAY_URL = "https://brown-given-giraffe-132.mypinata.cloud/ipfs/";
-const PINATA_AUTH_HEADER = "Bearer vTrc5zEXAzcJPxq52pTGYYAgx0r-PPHSu36Ovr6X-ll0dsEe8_fYu0WWkK4-fml-";
+const PINATA_GATEWAY_URL = "**";
+const PINATA_AUTH_HEADER = "**";
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
